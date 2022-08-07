@@ -1,0 +1,19 @@
+ php artisan migrate --seed
+
+ php artisan route:list 
+
+ php artisan serve
+
+
+Base: http://127.0.0.1:8000/api/Home/producto/
+
+Show: http://127.0.0.1:8000/api/Home/producto/show/1
+
+categoria: http://127.0.0.1:8000/api/Home/producto/categoria/1
+
+store: http://127.0.0.1:8000/api/Home/producto/create/1
+
+update: http://127.0.0.1:8000/api/Home/producto/update/1
+
+
+
