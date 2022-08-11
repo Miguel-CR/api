@@ -206,8 +206,15 @@ public function update(Request $request, $id)
      * @param  \App\Models\producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(producto $producto)
+    public function delete($id)
     {
+        $producto = Producto::find($id);
+        $result=$producto->delete();
+        if($result){
+
+        }else{
+            return ["result"=>"No existe"];
+        }
         //
     }
 }

@@ -37,6 +37,7 @@ Route::group(['prefix' => 'Home'], function () {
         Route::get('indexCategoria/{id}', [ProductoController::class, 'getProductosByCategoria']);
         Route::post('create', [ProductoController::class, 'store']);
         Route::patch('update/{id}', [ProductoController::class, 'update']);
+        Route::post('delete/{id}', [ProductoController::class, 'delete']);
     });
 });
 
