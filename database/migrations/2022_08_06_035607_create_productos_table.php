@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('precio',8,2);
             $table->boolean('promocion')->default(true);
             $table->string('imageName')->default("default");
-            $table->string('imagePath')->default("img-producto/default.jpg");
+            $table->string('imagePath')->default("assets/img-producto/default.jpg");
             //Relación con tabla Categoria
             $table->unsignedInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categorias');

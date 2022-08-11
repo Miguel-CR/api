@@ -16,7 +16,7 @@ class CategoriaController extends Controller
     {
         try {
             //Listar todas las categorias.
-            $categorias = Categorias::orderBy('id', 'asc')->get();
+            $categorias = Categoria::orderBy('id', 'asc')->get();
             $response = $categorias;
             return response()->json($response, 200);
         } catch (\Exception $e) {

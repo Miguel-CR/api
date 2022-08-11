@@ -69,7 +69,6 @@ class ProductoController extends Controller
             [
                 'nombre' => 'required|min:2', 'detalle' => 'required|min:5',
                 'precio' => 'required|numeric', 'categoria_id' => 'required|numeric',
-                'promocion'=>'required|boolean',
                 // , 'img' => 'required|image'
             ]
         );
@@ -95,7 +94,7 @@ class ProductoController extends Controller
                 $file = $request->file('img');
                 $nombreImagen = time() . "foto." . $file->getClientOriginalExtension();
                 $imageUpload = Image::make($file->getRealPath());
-                $path = 'img-producto/';
+                $path = 'assets/img-producto/';
                 $imageUpload->save(public_path($path) . $nombreImagen);
                 $p->imageName = $nombreImagen;
                 $p->imagePath = url($path) . "/" . $nombreImagen;
